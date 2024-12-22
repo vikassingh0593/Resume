@@ -40,7 +40,7 @@ if st.session_state.page == "home":
         # Display a motivational quote
         st.markdown(
             """
-            ### "Turning Data into Stories | A Glimpse into My Work"
+            ### Turning Data into Stories | A Glimpse into My Work
             """
         )
 
