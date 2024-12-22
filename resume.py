@@ -4,6 +4,22 @@ from PIL import Image
 # Setting up the page configuration
 st.set_page_config(page_title="Vikas Singh - Portfolio", layout="wide")
 
+# Remove any unnecessary margin or padding
+st.markdown(
+    """
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    .css-1y4e0bo {
+        padding-top: 0;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # Navigation control
 if "page" not in st.session_state:
     st.session_state.page = "home"  # Set default page to 'home' if it's not already set
