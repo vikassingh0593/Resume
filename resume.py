@@ -4,12 +4,12 @@ from PIL import Image
 # Setting up the page configuration
 st.set_page_config(page_title="Vikas Singh - Portfolio", layout="wide")
 
-
 # Navigation control
 if "page" not in st.session_state:
-    st.session_state.page = "home"
+    st.session_state.page = "home"  # Set default page to 'home' if it's not already set
+
 # Homepage
-elif st.session_state.page == "home":
+if st.session_state.page == "home":
     # Create columns to center the image
     col1, col2, col3 = st.columns([1, 1.5, 1])  # Adjust the ratio as needed
 
@@ -53,8 +53,16 @@ elif st.session_state.page == "home":
 
     # Navigation button with a hover effect
     if st.button("🌟 Discover The World 🌟"):
-        st.session_state.page = "resume"
-        st.rerun()  # Correct way to force a rerun
+        st.session_state.page = "resume"  # Update session state to the next page
+        st.experimental_rerun()  # Trigger a rerun to show the new content
+
+# Resume Page
+elif st.session_state.page == "resume":
+    st.title("Vikas Singh - Resume")
+    # Add content for the resume page
+    # st.markdown("This is where your resume content goes.")
+    # Add other sections like skills, experience, education, etc.
+
 
 
 
