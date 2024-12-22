@@ -72,16 +72,12 @@ if st.session_state.page == "home":
         st.session_state.page = "resume"  # Update session state to the next page
         st.rerun()  # Trigger a rerun to show the new content
 
-# Resume Page
-elif st.session_state.page == "resume":
-    st.title("Vikas Singh - Resume")
-    # Add content for the resume page
-    # st.markdown("This is where your resume content goes.")
-    # Add other sections like skills, experience, education, etc.
-
-
-
-
+# # Resume Page
+# elif st.session_state.page == "resume":
+#     st.title("Vikas Singh - Resume")
+#     # Add content for the resume page
+#     # st.markdown("This is where your resume content goes.")
+#     # Add other sections like skills, experience, education, etc.
 
 # Resume Page
 elif st.session_state.page == "resume":
