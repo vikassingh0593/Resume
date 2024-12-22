@@ -16,7 +16,8 @@ if st.session_state.page == "home":
     with col2:
         # Display the image with a fixed width (in normal aspect ratio)
         img = Image.open("vikaspic.jpeg")
-        st.image(img, use_container_width=False, width=400)  # Adjust width as needed
+        st.image(img, use_column_width=True)
+                #  use_container_width=False, width=400)  # Adjust width as needed
 
     col1, col2, col3 = st.columns([1, 2.3, 1])  # Adjust the ratio as needed
 
