@@ -27,7 +27,7 @@ if "page" not in st.session_state:
 # Homepage
 if st.session_state.page == "home":
     # Create columns to center the image
-    col1, col2, col3 = st.columns([1, 1.3, 1])  # Adjust the ratio as needed
+    col1, col2, col3 = st.columns([1, 1.1, 1])  # Adjust the ratio as needed
 
     with col2:
         # Display the image with a fixed width (in normal aspect ratio)
