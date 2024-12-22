@@ -4,22 +4,6 @@ from PIL import Image
 # Setting up the page configuration
 st.set_page_config(page_title="Vikas Singh - Portfolio", layout="wide")
 
-# Remove any unnecessary margin or padding
-# st.markdown(
-#     """
-#     <style>
-#     body {
-#         margin: 0;
-#         padding: 0;
-#     }
-#     .css-1y4e0bo {
-#         padding-top: 0;
-#     }
-#     </style>
-#     """,
-#     unsafe_allow_html=True
-# )
-
 # Navigation control
 if "page" not in st.session_state:
     st.session_state.page = "home"  # Set default page to 'home' if it's not already set
@@ -31,7 +15,7 @@ if st.session_state.page == "home":
 
     with col2:
         # Display the image with a fixed width (in normal aspect ratio)
-        img = Image.open("vikaspic.jpeg")
+        img = Image.open("pic2.jpeg")
         st.image(img, use_container_width=False, width=400)  # Adjust width as needed
 
     col1, col2, col3 = st.columns([1, 2.3, 1])  # Adjust the ratio as needed
@@ -74,7 +58,7 @@ if st.session_state.page == "home":
 
 # Resume Page
 elif st.session_state.page == "resume":
-    st.title("Turning Data into Insights, and Insights into Impact.")
+    st.title("Turning Data into Insights, and Insights into Impact")
 
     # Work Experience Section
     with st.expander("Work Experience"):
