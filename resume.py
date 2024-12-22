@@ -32,7 +32,7 @@ if st.session_state.page == "home":
     with col2:
         # Display the image with a fixed width (in normal aspect ratio)
         img = Image.open("vikaspic.jpeg")
-        st.image(img, use_container_width=False, width=450)  # Adjust width as needed
+        st.image(img, use_container_width=False, width=400)  # Adjust width as needed
 
     col1, col2, col3 = st.columns([1, 2.3, 1])  # Adjust the ratio as needed
 
@@ -72,12 +72,6 @@ if st.session_state.page == "home":
         st.session_state.page = "resume"  # Update session state to the next page
         st.rerun()  # Trigger a rerun to show the new content
 
-# # Resume Page
-# elif st.session_state.page == "resume":
-#     st.title("Vikas Singh - Resume")
-#     # Add content for the resume page
-#     # st.markdown("This is where your resume content goes.")
-#     # Add other sections like skills, experience, education, etc.
 
 # Resume Page
 elif st.session_state.page == "resume":
