@@ -4,6 +4,7 @@ from PIL import Image
 # Setting up the page configuration
 st.set_page_config(page_title="Vikas Singh - Portfolio", layout="wide")
 
+
 # Navigation control
 if "page" not in st.session_state:
     st.session_state.page = "home"
