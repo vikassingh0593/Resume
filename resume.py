@@ -43,7 +43,6 @@ if st.session_state.page == "home":
             ### Turning Data into Stories | A Glimpse into My Work
             """
         )
-
     # Add CSS styling for button
     st.markdown(
         """
