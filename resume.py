@@ -7,33 +7,54 @@ st.set_page_config(page_title="Vikas Singh - Portfolio", layout="wide")
 # Navigation control
 if "page" not in st.session_state:
     st.session_state.page = "home"
-    # st.title("Vikas Singh - Portfolio")
-
 # Homepage
 elif st.session_state.page == "home":
-    # st.title("Vikas Singh - Portfolio")
     # Create columns to center the image
-    col1, col2, col3 = st.columns([1, 2, 1])  # Adjust the ratio as needed
+    col1, col2, col3 = st.columns([1, 1.5, 1])  # Adjust the ratio as needed
 
     with col2:
         # Display the image with a fixed width (in normal aspect ratio)
         img = Image.open("vikaspic.jpeg")
-        st.image(img, use_container_width=False, width=500)  # Adjust width as needed
+        st.image(img, use_container_width=False, width=450)  # Adjust width as needed
 
-    col1, col2, col3 = st.columns([1, 2.77, 1])  # Adjust the ratio as needed
+    col1, col2, col3 = st.columns([1, 2.3, 1])  # Adjust the ratio as needed
 
     with col2:
-    # Display a motivational quote
+        # Display a motivational quote
         st.markdown(
             """
             ### "Turning Data into Stories | A Glimpse into My Work"
             """
         )
-    
-    # Navigation button
-    if st.button("Discover"):
+
+    # Add CSS styling for button
+    st.markdown(
+        """
+        <style>
+        .stButton>button {
+            background-color: #B0B0B0;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 12px;
+            padding: 10px 24px;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+        .stButton>button:hover {
+            background-color: #808080;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    # Navigation button with a hover effect
+    if st.button("🌟 Discover The World 🌟"):
         st.session_state.page = "resume"
         st.rerun()  # Correct way to force a rerun
+
 
 
 
