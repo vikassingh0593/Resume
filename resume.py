@@ -70,7 +70,7 @@ if st.session_state.page == "home":
     # Navigation button with a hover effect
     if st.button("🌟 Discover The World 🌟"):
         st.session_state.page = "resume"  # Update session state to the next page
-        st.experimental_rerun()  # Trigger a rerun to show the new content
+        st.rerun()  # Trigger a rerun to show the new content
 
 # Resume Page
 elif st.session_state.page == "resume":
