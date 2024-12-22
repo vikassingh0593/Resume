@@ -7,9 +7,11 @@ st.set_page_config(page_title="Vikas Singh - Portfolio", layout="wide")
 # Navigation control
 if "page" not in st.session_state:
     st.session_state.page = "home"
+    # st.title("Vikas Singh - Portfolio")
 
 # Homepage
 elif st.session_state.page == "home":
+    # st.title("Vikas Singh - Portfolio")
     # Create columns to center the image
     col1, col2, col3 = st.columns([1, 2, 1])  # Adjust the ratio as needed
 
@@ -18,15 +20,18 @@ elif st.session_state.page == "home":
         img = Image.open("vikaspic.jpeg")
         st.image(img, use_container_width=False, width=500)  # Adjust width as needed
 
+    col1, col2, col3 = st.columns([1, 2.77, 1])  # Adjust the ratio as needed
+
+    with col2:
     # Display a motivational quote
-    st.markdown(
-        """
-        ### "Dream big, work hard, stay focused, and surround yourself with good people."
-        """
-    )
+        st.markdown(
+            """
+            ### "Turning Data into Stories | A Glimpse into My Work"
+            """
+        )
     
     # Navigation button
-    if st.button("Go"):
+    if st.button("Discover"):
         st.session_state.page = "resume"
         st.rerun()  # Correct way to force a rerun
 
