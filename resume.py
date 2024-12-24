@@ -348,14 +348,25 @@ elif st.session_state.page == "skill":
 
 
 elif st.session_state.page == "edu":
-    st.title("My Academic Journey 🎓")
+    st.title("My Academic Journey 🎓") # My Academic Journey / The Scholar’s Path
 
     # st.write("---")
-    st.header("🎓 Bachelor of Technology")
+    st.header("🎓 [Bachelor of Technology](https://www.dcrustm.ac.in/)")
+    # st.header("🎓 Bachelor of Technology")
     st.write("🗓 **Jul'15 - Jun'19**")
     st.write("---")
 
-    st.subheader("🏫 **Deenbandhu Chhotu Ram University of Science and Technology (DCRUST)**")
+    st.markdown("""
+        <style>
+        a {
+            color: grey !important;  /* Force color to black */
+            text-decoration: none !important;  /* Remove underline */
+        }
+        </style>
+        """, unsafe_allow_html=True)
+
+    st.subheader("🏫 [**Deenbandhu Chhotu Ram University of Science and Technology**](https://www.dcrustm.ac.in/)")
+    # st.subheader("🏫 **Deenbandhu Chhotu Ram University of Science and Technology (DCRUST)**")
     
     st.write("🔍 **Key Projects & Training**")
     st.write("- 🌱 Investigated cost-effective strategies for optimizing Biogas plant operations.")
@@ -393,7 +404,30 @@ elif st.session_state.page == "edu":
         st.rerun() 
 
 elif st.session_state.page == "cert":
-    st.title("Certifications")
+    st.title("🏆 Professional Certifications")
+
+    st.markdown("""
+        ### Unlocking skills with industry-recognized certifications:
+    """)
+    
+    st.write("🌟 [SnowPro Core Certification](https://achieve.snowflake.com/28c5d1ba-3e6f-4663-9c18-dff6f228e04f#acc.T9U3DcjH)")
+    st.image("snowflake.png", width=100) 
+    
+    st.write("🌟 [Databricks Certified Data Engineer Associate](https://credentials.databricks.com/fee07c14-42f8-4fd0-895f-aa8a9bce315b#acc.1aISCKcw)")
+    st.image("databricks.png", width=100)  # Upload the Databricks logo
+    
+    st.write("🌟 [Microsoft Azure Data Fundamentals](https://www.credly.com/badges/19b2fcf6-d864-447b-ac18-b5af7defeb98)")
+    # st.image("azure_logo.png", width=40)  # Upload the Azure logo
+    
+    st.write("🌟 [Data Warehouse with BigQuery](https://www.credly.com/badges/100a7552-326d-4fdb-9f2a-627f36066477/linked_in_profile)")
+    # st.image("bigquery_logo.png", width=40)  # Upload the BigQuery logo
+    
+    st.write("🌟 [Scrum Fundamentals Certified](https://www.scrumstudy.com/certification/verify?type=SFC&number=1016849)")
+    # st.image("scrum_logo.png", width=40)  # Upload the Scrum logo
+    
+    st.write("🌟 [SQL (Advanced) - HackerRank](https://www.hackerrank.com/certificates/310efed0a7ae)")
+    st.image("sql.png", width=100)  # Upload the HackerRank logo
+
 
     # Back to Home navigation button
     if st.button("Back"):
@@ -407,11 +441,7 @@ elif st.session_state.page == "cert":
 
 
 
-    # # Certifications Section
-    # with st.expander("Certifications"):
-    #     st.write("- SnowPro Core Certification")
-    #     st.write("- Databricks Certified Data Engineer Associate")
-    #     st.write("- Microsoft Azure Data Fundamentals")
+
 
 
 # [theme]
