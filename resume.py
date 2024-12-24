@@ -111,14 +111,14 @@ elif st.session_state.page == "resume":
 
 # Resume Page
 elif st.session_state.page == "experience":
-    st.title("Work Experience")
+    st.title("Career Highlights 🚀")
 
     # Work Experience Section
-    with st.expander("**Tredence Inc.**"):
+    with st.expander("**Tredence Inc.**", expanded=True):
 
         st.subheader("Senior Software Engineer - Data Analytics & Engineering")
         st.write("**Feb'22 - Present**")
-        st.markdown("### Data Analytics & Solutions")
+        st.markdown("### Data Analytics & Solutions 📊")
         st.write("**Developed a supply chain simulation & analytics tool for a global CPG client**")
         st.write(
             """
@@ -129,7 +129,7 @@ elif st.session_state.page == "experience":
             """
         )
 
-        st.markdown("### Data Engineering & Solutions")
+        st.markdown("### Data Engineering & Solutions ⚙️")
         st.write("**Developed an integrated solution for a CPG client on Databricks and ADLS**")
         st.write(
             """
@@ -139,7 +139,7 @@ elif st.session_state.page == "experience":
             """
         )
 
-        st.write("**Awards:** Pat on the Back Award")
+        st.write("**Awards:** Pat on the Back Award 🎉")
         st.write("---")
 
 
@@ -148,7 +148,7 @@ elif st.session_state.page == "experience":
         st.subheader("Consultant - Analytics")
         st.write("**Feb'22 - Jan'24**")
 
-        st.markdown("### Data Engineering & Solutions")
+        st.markdown("### Data Engineering & Solutions ⚙️")
         st.write("**Designed and implemented a composite data source for an automobile client using HiveQL and PySpark**")
         st.write(
             """
@@ -176,7 +176,7 @@ elif st.session_state.page == "experience":
             """
         )
 
-        st.markdown("### Data Analytics & Visualization")
+        st.markdown("### Data Analytics & Visualization 📊")
         st.write("**Developed a Quartile Distribution table to analyze dealers' performance and suggest improvements**")
         st.write(
             """
@@ -194,7 +194,7 @@ elif st.session_state.page == "experience":
             """
         )
 
-        st.markdown("### Stakeholder Management & Initiatives")
+        st.markdown("### Stakeholder Management & Initiatives 👥")
         st.write("**Up-skilled the team on new technologies, including Azure Databricks and Azure DevOps**")
         st.write(
             """
@@ -212,7 +212,7 @@ elif st.session_state.page == "experience":
             """
         )
 
-        st.write("**Awards:** Stellar Performance Award")
+        st.write("**Awards:** Stellar Performance Award 🌟")
 
         st.write("---")
 
@@ -220,7 +220,7 @@ elif st.session_state.page == "experience":
         st.subheader("Program Associate – Data Analytics")
         st.write("**Sep'19 - Feb'22**")
 
-        st.markdown("### Data Analytics & Visualization")
+        st.markdown("### Data Analytics & Visualization 📈")
         st.write("**Applied Python models, including K-Means Clustering, to enhance marketing campaigns**")
         st.write(
             """
@@ -253,7 +253,7 @@ elif st.session_state.page == "experience":
             """
         )
 
-        st.markdown("### Stakeholder Management & Initiatives")
+        st.markdown("### Stakeholder Management & Initiatives 🤝")
         st.write("**Collaborated closely with developers to prioritize and integrate initiatives**")
         st.write(
             """
@@ -279,8 +279,7 @@ elif st.session_state.page == "experience":
         st.rerun() 
 
 elif st.session_state.page == "skill":
-    st.title("Skills")
-
+    st.title("My Toolbox 🧰")
 
     # Define markdown content for the skills, tools, and platforms
     programming_languages_markdown = """
@@ -308,6 +307,9 @@ elif st.session_state.page == "skill":
     - 🔧 Alteryx
     - 🖥️ DBeaver
     - 📝 Jupyter
+    - ☁️ Azure DevOps
+    - 🐙 GitHub
+    - 🖥️ VS Code
     """
 
     bi_analytics_tools_markdown = """
@@ -322,37 +324,68 @@ elif st.session_state.page == "skill":
 
     # Column 1: Programming Languages & Scripting
     with col1:
-        st.subheader("Programming Languages & Scripting 💻")
+        st.subheader("💻 Programming Languages & Scripting")
         st.markdown(programming_languages_markdown)
         st.markdown(scripting_tools_markdown)
-        # st.image('python.png', width=100)
-        # st.image('sql.png', width=100)
 
     # Column 2: Data Platforms & Tools
     with col2:
-
-        st.subheader("Data Platforms & Tools ⚙️")
+        st.subheader("⚙️ Data Platforms & Tools")
         st.markdown(data_platforms_tools_markdown)
-        # st.image('databricks.png', width=100)
-        # st.image('snowflake.png', width=100)
 
     # Create a centered column for the third section
-    col3 = st.columns([1, 2, 0.1])[1]  # Center the third column (middle one)
+    col3 = st.columns([1, 2, 0.5])[1]  # Center the third column (middle one)
 
     # Column 3: Business Intelligence & Analytics Tools
     with col3:
-        st.subheader("Business Intelligence & Analytics Tools 📊")
+        st.subheader("📊 Business Intelligence & Analytics Tools")
         st.markdown(bi_analytics_tools_markdown)
-        # st.image('powerbi.png', width=100)
-
 
     # Back to Home navigation button
-    if st.button("Back"):
+    if st.button("Back to Resume"):
         st.session_state.page = "resume"
-        st.rerun() 
+        st.rerun()
+
 
 elif st.session_state.page == "edu":
-    st.title("Education")
+    st.title("My Academic Journey 🎓")
+
+    # st.write("---")
+    st.header("🎓 Bachelor of Technology")
+    st.write("🗓 **Jul'15 - Jun'19**")
+    st.write("---")
+
+    st.subheader("🏫 **Deenbandhu Chhotu Ram University of Science and Technology (DCRUST)**")
+    
+    st.write("🔍 **Key Projects & Training**")
+    st.write("- 🌱 Investigated cost-effective strategies for optimizing Biogas plant operations.")
+    
+    # st.write("---")
+    st.write("💼 **Internship Experience**")
+
+    st.write("- 🔋 Exide Industries Ltd., Bawal | Research Intern")
+    # st.write("- 🔍 Assessed awareness of Exide's emergency and online services among 20+ dealers and 400+ customers in Rewari district.")
+    # st.write("- 📊 Exide's market share was strong (~70%), but awareness of emergency & online services was low.")
+    # st.write("- 📱 Utilized social media targeting (25-35 age group) to bridge the communication gap and raise awareness.")
+    # st.write("- 🛠 Used warranty space to advertise services, conducted quarterly dealer training for new products and offerings.")
+
+    st.write("- 🎨 Nerolac Pvt. Ltd., Bawal | Student Intern")
+    # st.write("- 🔧 Optimized paint solvent usage by analyzing data variance between SAP ERP and On-Floor Books.")
+    # st.write("- 🔄 Analyzed the lifecycle of solvent and paint manufacturing processes to identify causes of variance.")
+    # st.write("- 📉 Achieved 87% reduction in variance by suggesting changes in the floor measurement methodology.")
+    # st.write("- 💸 Reduced solvent wastage by 24%, minimizing transportation and handling losses.")
+
+    st.write("---")
+    st.write("🏅 **Extra-Curricular Activities & Achievements**")
+
+    st.write("- 🌍 Volunteer at N.S.S Camp & Net Impact Event")
+    st.write("- 💻 Coached 100+ people on how to use the UPI interface with or without the app.")
+    st.write("- 🏆 Ranked #1 in Haryana and #13 in India in 🧮 National Mathematics Olympiad 2009 (50,000+ participants).")
+    st.write("- 🏢 Elected President of B. Tech Hostel & Managed a student community 👥 of 450+ members.")
+    st.write("- 🎉 Coordinator| 🚨 Managed a team of 25+ students to ensure the smooth execution of the cultural event.")
+
+
+    st.write("---")
 
     # Back to Home navigation button
     if st.button("Back"):
@@ -372,11 +405,7 @@ elif st.session_state.page == "cert":
 
 
 
-    # # Education Section
-    # with st.expander("Education"):
-    #     st.write("**Deenbandhu Chhotu Ram University of Science and Technology (DCRUST)**")
-    #     st.write("Bachelor of Technology | July'15 - May'19")
-    #     st.write("- Researched cost optimization strategies for Biogas plant operations.")
+
 
     # # Certifications Section
     # with st.expander("Certifications"):
@@ -384,4 +413,8 @@ elif st.session_state.page == "cert":
     #     st.write("- Databricks Certified Data Engineer Associate")
     #     st.write("- Microsoft Azure Data Fundamentals")
 
+
+# [theme]
+# base="light"
+# backgroundColor="#cbc6c6"
 
