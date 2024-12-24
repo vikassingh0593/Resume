@@ -342,7 +342,7 @@ elif st.session_state.page == "skill":
         st.markdown(bi_analytics_tools_markdown)
 
     # Back to Home navigation button
-    if st.button("Back to Resume"):
+    if st.button("Back"):
         st.session_state.page = "resume"
         st.rerun()
 
