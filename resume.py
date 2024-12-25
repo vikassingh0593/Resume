@@ -381,7 +381,7 @@ elif st.session_state.page == "edu":
     st.markdown("""
         <style>
         a {
-            color: grey !important;  /* Force color to black */
+            color: black !important;  /* Force color to black */
             text-decoration: none !important;  /* Remove underline */
         }
         </style>
@@ -393,20 +393,16 @@ elif st.session_state.page == "edu":
     st.write("🔍 **Key Projects & Training**")
     st.write("- 🌱 Investigated cost-effective strategies for optimizing Biogas plant operations.")
     
-    # st.write("---")
-    st.write("💼 **Internship Experience**")
+    st.write("---")
+    st.markdown("💼 **Internship Experience**")
 
-    st.write("- 🔋 Exide Industries Ltd., Bawal | Research Intern")
-    # st.write("- 🔍 Assessed awareness of Exide's emergency and online services among 20+ dealers and 400+ customers in Rewari district.")
-    # st.write("- 📊 Exide's market share was strong (~70%), but awareness of emergency & online services was low.")
-    # st.write("- 📱 Utilized social media targeting (25-35 age group) to bridge the communication gap and raise awareness.")
-    # st.write("- 🛠 Used warranty space to advertise services, conducted quarterly dealer training for new products and offerings.")
+    st.write("🔋 **Exide Industries Ltd., Bawal | Research Intern**")
 
-    st.write("- 🎨 Nerolac Pvt. Ltd., Bawal | Student Intern")
-    # st.write("- 🔧 Optimized paint solvent usage by analyzing data variance between SAP ERP and On-Floor Books.")
-    # st.write("- 🔄 Analyzed the lifecycle of solvent and paint manufacturing processes to identify causes of variance.")
-    # st.write("- 📉 Achieved 87% reduction in variance by suggesting changes in the floor measurement methodology.")
-    # st.write("- 💸 Reduced solvent wastage by 24%, minimizing transportation and handling losses.")
+    st.markdown("<div style='margin-left: 40px;'>- 📊 Conducted an in-depth assessment of Exide's emergency and online services, gathering insights from over 20 dealers and 400+ customers in the Rewari district.</div>", unsafe_allow_html=True)
+
+    st.write("🎨 **Nerolac Pvt. Ltd., Bawal | Student Intern**")
+    st.markdown("<div style='margin-left: 40px;'>- 🔧 Optimized solvent wastage by 24% and minimized variance by 87% by analyzing ERP and On-Floor data, optimizing the solvent lifecycle and manufacturing processes.</div>", unsafe_allow_html=True)
+
 
     st.write("---")
     st.write("🏅 **Extra-Curricular Activities & Achievements**")
