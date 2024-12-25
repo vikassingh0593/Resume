@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image
 
 # Setting up the page configuration
-st.set_page_config(page_title="The Data Engineer's Code - Vikas Singh", layout="wide")
+st.set_page_config(page_title="Data Chronicles by Vikas Singh", layout="wide")
 
 # Remove any unnecessary margin or padding and set body padding to 0
 st.markdown(
