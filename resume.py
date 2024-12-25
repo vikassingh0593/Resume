@@ -447,18 +447,17 @@ elif st.session_state.page == "edu":
     st.subheader("🏫 [**Deenbandhu Chhotu Ram University of Science and Technology**](https://www.dcrustm.ac.in/)")
     # st.subheader("🏫 **Deenbandhu Chhotu Ram University of Science and Technology (DCRUST)**")
     
-    st.write("🔍 **Key Projects & Training**")
-    st.write("- 🌱 Investigated cost-effective strategies for optimizing Biogas plant operations.")
-    
-    st.write("---")
-    st.markdown("💼 **Internship Experience**")
+    st.write("🔍 **Key Projects & Internship**")
+
+    st.write("🔋 **Optimizing Biogas plant operations**")
+    st.markdown("<div style='margin-left: 40px; margin-bottom: 20px;'>- 🌱 Investigated cost-effective strategies for optimizing Biogas plant operations.</div>", unsafe_allow_html=True)
 
     st.write("🔋 **Exide Industries Ltd., Bawal | Research Intern**")
 
-    st.markdown("<div style='margin-left: 40px;'>- 📊 Conducted an in-depth assessment of Exide's emergency and online services, gathering insights from over 20 dealers and 400+ customers in the Rewari district.</div>", unsafe_allow_html=True)
+    st.markdown("<div style='margin-left: 40px; margin-bottom: 20px;'>- 📊 Conducted an in-depth assessment of Exide's emergency and online services, gathering insights from over 20 dealers and 400+ customers in the Rewari district.</div>", unsafe_allow_html=True)
 
     st.write("🎨 **Nerolac Pvt. Ltd., Bawal | Student Intern**")
-    st.markdown("<div style='margin-left: 40px;'>- 🔧 Optimized solvent wastage by 24% and minimized variance by 87% by analyzing ERP and On-Floor data, optimizing the solvent lifecycle and manufacturing processes.</div>", unsafe_allow_html=True)
+    st.markdown("<div style='margin-left: 40px; margin-bottom: 20px;'>- 🔧 Optimized solvent wastage by 24% and minimized variance by 87% by analyzing ERP and On-Floor data, optimizing the solvent lifecycle and manufacturing processes.</div>", unsafe_allow_html=True)
 
 
     st.write("---")
