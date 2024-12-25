@@ -25,7 +25,16 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
+st.markdown(
+    """
+    <style>
+        .block-container {
+            padding-top: 0rem; /* Adjust this value to reduce the gap */
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # Navigation control
 if "page" not in st.session_state:
