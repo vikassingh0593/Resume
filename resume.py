@@ -425,68 +425,11 @@ elif st.session_state.page == "edu":
         st.session_state.page = "resume"
         st.rerun() 
 
-# elif st.session_state.page == "cert":
-#     st.title("🏆 Professional Certifications")
-
-#     st.markdown("""
-#         ### Unlocking skills with industry-recognized certifications:
-#     """)
-    
-#     st.markdown("<div style='margin-bottom: 20px;'></div>", unsafe_allow_html=True)
-
-#     # HTML table for clickable certification logos
-#     html_table = f"""
-#     <table style="width:100%; text-align:center;">
-#         <tr>
-#             <td>
-#                 <a href="https://achieve.snowflake.com/28c5d1ba-3e6f-4663-9c18-dff6f228e04f#acc.T9U3DcjH" target="_blank">
-#                     <img src="data:image/png;base64,{get_base64_image('snow.png')}" alt="SnowPro Core Certification" width="100">
-#                 </a>
-#             </td>
-#             <td>
-#                 <a href="https://credentials.databricks.com/fee07c14-42f8-4fd0-895f-aa8a9bce315b#acc.1aISCKcw" target="_blank">
-#                     <img src="data:image/png;base64,{get_base64_image('DatabricksDEA.png')}" alt="Databricks Certification" width="100">
-#                 </a>
-#             </td>
-#             <td>
-#                 <a href="https://www.credly.com/badges/19b2fcf6-d864-447b-ac18-b5af7defeb98" target="_blank">
-#                     <img src="data:image/png;base64,{get_base64_image('dp900.png')}" alt="Microsoft Azure Data Fundamentals" width="100">
-#                 </a>
-#             </td>
-#         </tr>
-#         <tr>
-#             <td>
-#                 <a href="https://www.credly.com/badges/100a7552-326d-4fdb-9f2a-627f36066477/linked_in_profile" target="_blank">
-#                     <img src="data:image/png;base64,{get_base64_image('bigquery.png')}" alt="Data Warehouse with BigQuery" width="100">
-#                 </a>
-#             </td>
-#             <td>
-#                 <a href="https://www.scrumstudy.com/certification/verify?type=SFC&number=1016849" target="_blank">
-#                     <img src="data:image/png;base64,{get_base64_image('scrum.png')}" alt="Scrum Fundamentals Certified" width="100">
-#                 </a>
-#             </td>
-#             <td>
-#                 <a href="https://www.hackerrank.com/certificates/310efed0a7ae" target="_blank">
-#                     <img src="data:image/png;base64,{get_base64_image('hackerrank.png')}" alt="SQL (Advanced) - HackerRank" width="100">
-#                 </a>
-#             </td>
-#         </tr>
-#     </table>
-#     """
-
-#     # Render the HTML table in Streamlit
-#     st.markdown(html_table, unsafe_allow_html=True)
-
-#     st.markdown("<div style='margin-bottom: 20px;'></div>", unsafe_allow_html=True)
-
 
 
 elif st.session_state.page == "cert":
     st.title("🏆 Professional Certifications")
 
-    st.markdown("""
-        ### Unlocking skills with industry-recognized certifications:
-    """)
     
     st.markdown("<div style='margin-bottom: 20px;'></div>", unsafe_allow_html=True)
 
