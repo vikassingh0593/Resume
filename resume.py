@@ -9,13 +9,29 @@ def get_base64_image(image_path):
     with open(image_path, "rb") as img_file:
         return base64.b64encode(img_file.read()).decode("utf-8")
 
-
-# def get_base64_image(image_name):
-#     # Implement your method to get base64 encoded image
-#     pass
-
 # Setting up the page configuration
 st.set_page_config(page_title="Data Chronicles by Vikas Singh", layout="wide")
+
+# [theme]
+# base="light"
+# font="serif"
+
+
+st.markdown("""
+    <style>
+        body {
+            background-color: #cbc6c6;  # Set background color
+        }
+
+        /* Customize further if needed */
+        .streamlit-expanderHeader {
+            background-color: #cbc6c6;  # Apply to expanders if needed
+        }
+        .css-ffhzg2 {
+            background-color: #cbc6c6;  # Apply to the sidebar if needed
+        }
+    </style>
+""", unsafe_allow_html=True)
 
 # Remove any unnecessary margin or padding and set body padding to 0
 st.markdown(
@@ -49,6 +65,43 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+# Custom CSS for button styling
+st.markdown("""
+    <style>
+        .stButton button {
+            background-color: #B0B0B0;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .stButton button:hover {
+            # background-color: #808080;
+            transform: translateY(-3px);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .stButton button:focus {
+            outline: none;
+        }
+        .stButton button:active {
+            transform: translateY(1px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .stButton {
+            width: 100%;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
 # Navigation control
 if "page" not in st.session_state:
     st.session_state.page = "home"  # Set default page to 'home' if it's not already set
@@ -73,61 +126,65 @@ if st.session_state.page == "home":
             ### Turning Data into Stories | A Glimpse into My Work
             """
         )
-    # Add CSS styling for button
-    st.markdown(
-        """
-        <style>
-        .stButton>button {
-            background-color: #B0B0B0;
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 12px;
-            padding: 10px 24px;
-            border: none;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease;
-        }
-        .stButton>button:hover {
-            background-color: #808080;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True,
-    )
+    # # Add CSS styling for button
+    # st.markdown(
+    #     """
+    #     <style>
+    #     .stButton>button {
+    #         background-color: #B0B0B0;
+    #         color: white;
+    #         font-size: 18px;
+    #         font-weight: bold;
+    #         border-radius: 12px;
+    #         padding: 10px 24px;
+    #         border: none;
+    #         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    #         transition: background-color 0.3s ease;
+    #     }
+    #     .stButton>button:hover {
+    #         background-color: #808080;
+    #     }
+    #     </style>
+    #     """,
+    #     unsafe_allow_html=True,
+    # )
 
     # Navigation button with a hover effect
     if st.button("📈 Discover The World 📈"):
         st.session_state.page = "resume"  # Update session state to the next page
         st.rerun()  # Trigger a rerun to show the new content
 
-
 # Resume Page
-elif st.session_state.page == "resume":
+if st.session_state.page == "resume":
     st.title("Turning Data into Insights, and Insights into Impact")
 
 
-    # Navigation button with a hover effect
-    if st.button("📈 Work Experience 📈"):
-        st.session_state.page = "experience"  # Update session state to the next page
-        st.rerun()  # Trigger a rerun to show the new content
+    # Container for buttons
+    with st.container():
+        st.markdown("<div class='button-container'>", unsafe_allow_html=True)
 
-    if st.button("📈 Skills 📈"):
-        st.session_state.page = "skill"  # Update session state to the next page
-        st.rerun()  # Trigger a rerun to show the new content
+        # Navigation buttons with added hover effects and icons
+        if st.button("📈 Work Experience 📈"):
+            st.session_state.page = "experience"  # Update session state to the next page
+            st.rerun()  # Trigger a rerun to show the new content
 
-    if st.button("📈 Education 📈"):
-        st.session_state.page = "edu"  # Update session state to the next page
-        st.rerun()  # Trigger a rerun to show the new content   
+        if st.button("📈 Skills 📈"):
+            st.session_state.page = "skill"  # Update session state to the next page
+            st.rerun()  # Trigger a rerun to show the new content
 
-    if st.button("📈 Certifications 📈"):
-        st.session_state.page = "cert"  # Update session state to the next page
-        st.rerun()  # Trigger a rerun to show the new content
+        if st.button("📈 Education 📈"):
+            st.session_state.page = "edu"  # Update session state to the next page
+            st.rerun()  # Trigger a rerun to show the new content   
 
-    # Back to Home navigation button
-    if st.button("Back to Home"):
-        st.session_state.page = "home"
-        st.rerun() 
+        if st.button("📈 Certifications 📈"):
+            st.session_state.page = "cert"  # Update session state to the next page
+            st.rerun()  # Trigger a rerun to show the new content
+
+        # Back to Home navigation button
+        if st.button("Back to Home" , key="back_home"):
+            st.session_state.page = "home"
+            st.rerun()
+
 
 
 
