@@ -126,64 +126,172 @@ if st.session_state.page == "home":
             ### Turning Data into Stories | A Glimpse into My Work
             """
         )
-    # # Add CSS styling for button
-    # st.markdown(
-    #     """
-    #     <style>
-    #     .stButton>button {
-    #         background-color: #B0B0B0;
-    #         color: white;
-    #         font-size: 18px;
-    #         font-weight: bold;
-    #         border-radius: 12px;
-    #         padding: 10px 24px;
-    #         border: none;
-    #         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    #         transition: background-color 0.3s ease;
-    #     }
-    #     .stButton>button:hover {
-    #         background-color: #808080;
-    #     }
-    #     </style>
-    #     """,
-    #     unsafe_allow_html=True,
-    # )
 
     # Navigation button with a hover effect
     if st.button("📈 Discover The World 📈"):
         st.session_state.page = "resume"  # Update session state to the next page
         st.rerun()  # Trigger a rerun to show the new content
 
+
+#             background-color: #B0B0B0;
+
+
 # Resume Page
 if st.session_state.page == "resume":
-    st.title("Turning Data into Insights, and Insights into Impact")
 
+    st.markdown(
+        """
+        <style>
+            .block-container {
+                padding-top: 0rem; /* Adjust this value to reduce the gap */
+            }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
-    # Container for buttons
-    with st.container():
-        st.markdown("<div class='button-container'>", unsafe_allow_html=True)
+    # Remove any unnecessary margin or padding and set body padding to 0
+    st.markdown(
+        """
+        <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .css-1y4e0bo {
+            padding-top: 0;  /* Remove any padding from the top */
+        }
+        .stImage > img {
+            margin-top: 0;  /* Remove any margin from the image */
+        }
+        .stApp {
+            padding-top: 0 !important;  /* Ensure no padding in the main app container */
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
-        # Navigation buttons with added hover effects and icons
-        if st.button("📈 Work Experience 📈"):
-            st.session_state.page = "experience"  # Update session state to the next page
-            st.rerun()  # Trigger a rerun to show the new content
+    st.markdown(
+        """
+        <style>
+        body {
+            # background: linear-gradient(120deg, #fdfbfb, #ebedee); /* Subtle gradient background */
+        }
+        .title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: bold;
+            color: black;
+            # margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 1.5rem;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+        .stButton>button {
+            background-color: #B0B0B0;
+            color: white;
+            border: none;
+            padding: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+            width: 100%; /* Ensure full width buttons for all */
+            height: 50px; /* Set consistent height for buttons */
+        }
+        .stButton>button:hover {
+            background-color: #B0B0B0;
+            transform: scale(1.05); /* Zoom effect */
+        }
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #B0B0B0;
+            color: white;
+            border: none;
+            padding: 20px 40px; /* Matching padding for consistency */
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: auto; /* Auto width based on content */
+            height: 50px; /* Matching height */
+        }
+        .back-button:hover {
+            background-color: #9e9e9e;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
 
-        if st.button("📈 Skills 📈"):
-            st.session_state.page = "skill"  # Update session state to the next page
-            st.rerun()  # Trigger a rerun to show the new content
+    # Main title and subtitle
+    st.markdown("<div class='title'>🚀 Turning Data into Insights, and Insights into Impact</div>", unsafe_allow_html=True)
+    # st.markdown("<div class='subtitle'>Discover my journey, skills, and accomplishments</div>", unsafe_allow_html=True)
 
-        if st.button("📈 Education 📈"):
-            st.session_state.page = "edu"  # Update session state to the next page
-            st.rerun()  # Trigger a rerun to show the new content   
+    # Button labels and corresponding pages
+    buttons = [
+        {"label": "💼 Work Experience", "page": "experience"},
+        {"label": "🛠️ Skills & Expertise", "page": "skill"},
+        {"label": "🎓 Education", "page": "edu"},
+        {"label": "📜 Certifications", "page": "cert"}
+        # ,
+        # {"label": "⭐ Explore More ⭐", "page": "explore"}
+    ]
 
-        if st.button("📈 Certifications 📈"):
-            st.session_state.page = "cert"  # Update session state to the next page
-            st.rerun()  # Trigger a rerun to show the new content
+    # Create two columns for the buttons
+    col1, col2 = st.columns(2)
 
-        # Back to Home navigation button
-        if st.button("Back to Home" , key="back_home"):
+    # Loop through the buttons and distribute them between columns
+    for i, button in enumerate(buttons):
+        if i % 2 == 0:  # Even index -> Column 1
+            with col1:
+                if st.button(button["label"], key=button["page"]):
+                    st.session_state.page = button["page"]
+                    st.rerun()
+        else:  # Odd index -> Column 2
+            with col2:
+                if st.button(button["label"], key=button["page"]):
+                    st.session_state.page = button["page"]
+                    st.rerun()
+
+    col1, col2, col3 = st.columns([1, 2, 1])
+    with col2:
+        if st.button("⭐ Explore More ⭐", key="explore"):
+            st.session_state.page = "explore"
+            st.rerun()
+
+    col1, col2, col3 = st.columns([1, 10, 3])
+
+    with col1:
+        for _ in range(20):  
+            st.write("\n")
+
+    with col1:
+        if st.button("Back", key="back_home"):
             st.session_state.page = "home"
             st.rerun()
+
+
+
+
+
+elif st.session_state.page == "explore":
+    st.title("Explore More")  
+
+    # Back to Home navigation button
+    if st.button("Back"):
+        st.session_state.page = "resume"
+        st.rerun() 
+
 
 
 
