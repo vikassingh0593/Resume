@@ -263,11 +263,11 @@ if st.session_state.page == "resume":
                     st.session_state.page = button["page"]
                     st.rerun()
 
-    col1, col2, col3 = st.columns([1, 2, 1])
-    with col2:
-        if st.button("⭐ Explore More ⭐", key="explore"):
-            st.session_state.page = "explore"
-            st.rerun()
+    # col1, col2, col3 = st.columns([1, 2, 1])
+    # with col2:
+    #     if st.button("⭐ Explore More ⭐", key="explore"):
+    #         st.session_state.page = "explore"
+    #         st.rerun()
 
     col1, col2, col3 = st.columns([1, 10, 3])
 
